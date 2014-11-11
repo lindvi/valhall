@@ -1,0 +1,71 @@
+@import url("//fonts.googleapis.com/css?family=Lato:200,300,400,700");
+
+html
+{
+	height: 100%;
+	font-size: 14px; 
+}
+
+body
+{
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: url('bkg.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+	.flick
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		background: url('bkg-flick.png');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		-webkit-transition: all 1s ease-in-out;
+		-moz-transition: all 1s ease-in-out;
+		-ms-transition: all 1s ease-in-out;
+		-o-transition: all 1s ease-in-out;
+		transition: all 1s ease-in-out;
+
+		@-webkit-keyframes pulseanim {
+			0%   { opacity: 0; }
+			100% { opacity: 1; }
+		}
+		@-moz-keyframes pulseanim {
+			0%   { opacity: 0; }
+			100% { opacity: 1; }
+		}
+		@-o-keyframes pulseanim {
+			0%   { opacity: 0; }
+			100% { opacity: 1; }
+		}
+		@keyframes pulseanim {
+			0%   { opacity: 0; }
+			100% { opacity: 1; }
+		}
+
+		&.pulse {
+			-webkit-animation: pulseanim 5s infinite;
+			-moz-animation:    pulseanim 5s infinite;
+			-o-animation:      pulseanim 5s infinite;
+			animation:         pulseanim 5s infinite;		
+		}
+	}
+
+}
+
+	.valhall
+	{
+		position: absolute;
+		top: 100px;
+		right: 20px;
+		font-weight: 200;
+		font-size: 60px;
+		color: white;
+		opacity: .5;
+		z-index: 3;
+	}
